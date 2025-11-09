@@ -1,4 +1,4 @@
-# Quran Foundation Project
+# Quran Foundation Project by Amna Khan
 
 A modern, full-stack Quran reading application built with Next.js, TypeScript, and the Quran.Foundation API. This project demonstrates technical skills in building scalable web applications with proper authentication, API integration, and user experience design.
 
