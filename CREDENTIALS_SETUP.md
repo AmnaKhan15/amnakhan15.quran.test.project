@@ -59,15 +59,15 @@ QURAN_API_BASE_URL=https://apis.quran.foundation/content/api/v4
 ## 📋 Credentials Summary
 
 ### Pre-Production (Test) - Use for Development
-- **Client ID**: `2c18b618-244e-473c-a3ee-5ea17801b47f`
-- **Client Secret**: `ukSkhb6jABZLwdODmsZyfCkbR0`
+- **Client ID**: ``
+- **Client Secret**: `
 - **Auth Endpoint**: `https://prelive-oauth2.quran.foundation`
 - **API Base URL**: `https://apis-prelive.quran.foundation/content/api/v4`
 - **Note**: Limited data, but all features enabled for testing
 
 ### Production (Live) - Use for Deployment
-- **Client ID**: `4f8d66fd-93fa-4f61-903a-2b169dd18652`
-- **Client Secret**: `Tx8we0A8c15gaOxPqkHfERgoDE`
+- **Client ID**: ``
+- **Client Secret**: ``
 - **Auth Endpoint**: `https://oauth2.quran.foundation`
 - **API Base URL**: `https://apis.quran.foundation/content/api/v4`
 
