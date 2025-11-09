@@ -41,7 +41,7 @@ export default function ChapterPage() {
 
         // Fetch verses
         const versesResponse = await fetch(
-          `/api/chapters/${chapterId}/verses?page=${currentPage}&per_page=10&translations=131`
+          `/api/chapters/${chapterId}/verses?page=${currentPage}&per_page=10&translations=85`
         );
         if (!versesResponse.ok) throw new Error('Failed to fetch verses');
         const versesData = await versesResponse.json();

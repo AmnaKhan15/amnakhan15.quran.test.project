@@ -46,7 +46,7 @@ export interface Verse {
     resource_id: number;
     text: string;
     resource_name: string;
-    resource_language_name: string;
+    resource_language_name?: string;
   }>;
 }
 
@@ -168,25 +168,35 @@ export async function getChapterVerses(
   const params: Record<string, string> = {
     page: page.toString(),
     per_page: perPage.toString(),
+    // Include text fields to get Arabic text
+    fields: 'text_uthmani,text_simple,text_indopak',
   };
   
   if (translations) {
     params.translations = translations;
+    // Include translation fields
+    params.translation_fields = 'text,resource_name,resource_language_name';
   }
 
   return makeAuthenticatedRequest<VersesResponse>(`/verses/by_chapter/${chapterId}`, params);
 }
 
 /**
- * Get a specific verse
+ * Get a specific verse by key (e.g., "1:1", "2:255")
  */
 export async function getVerse(verseKey: string, translations?: string): Promise<Verse> {
-  const params: Record<string, string> = {};
+  const params: Record<string, string> = {
+    // Include text fields to get Arabic text
+    fields: 'text_uthmani,text_simple,text_indopak',
+  };
+  
   if (translations) {
     params.translations = translations;
+    // Include translation fields
+    params.translation_fields = 'text,resource_name,resource_language_name';
   }
 
-  const response = await makeAuthenticatedRequest<{ verse: Verse }>(`/verses/${verseKey}`, params);
+  const response = await makeAuthenticatedRequest<{ verse: Verse }>(`/verses/by_key/${verseKey}`, params);
   return response.verse;
 }
 

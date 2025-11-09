@@ -1,7 +1,6 @@
 'use client';
 
 import { Verse } from '@/lib/quran-api';
-import { motion } from 'framer-motion';
 
 interface VerseCardProps {
   verse: Verse;
@@ -10,15 +9,8 @@ interface VerseCardProps {
 
 export default function VerseCard({ verse, index = 0 }: VerseCardProps) {
   return (
-    <motion.div 
+    <div 
       className="bg-white dark:bg-slate-900 rounded-lg border border-primary-200 dark:border-primary-800 p-6 mb-6"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.4, 
-        delay: index * 0.05,
-        ease: "easeOut"
-      }}
     >
       <div className="flex items-start gap-5">
         <div className="flex-shrink-0 w-10 h-10 rounded-md bg-primary-100 dark:bg-primary-900/50 flex items-center justify-center border border-primary-200 dark:border-primary-800">
@@ -40,9 +32,11 @@ export default function VerseCard({ verse, index = 0 }: VerseCardProps) {
                     <span className="text-xs font-medium px-2 py-0.5 rounded-md bg-accent-50 dark:bg-accent-900/20 text-accent-700 dark:text-accent-400 border border-accent-200 dark:border-accent-800">
                       {translation.resource_name}
                     </span>
-                    <span className="text-xs text-primary-500 dark:text-primary-500">
-                      {translation.resource_language_name}
-                    </span>
+                    {translation.resource_language_name && (
+                      <span className="text-xs text-primary-500 dark:text-primary-500">
+                        {translation.resource_language_name}
+                      </span>
+                    )}
                   </div>
                   <p className="text-primary-700 dark:text-primary-300 leading-relaxed text-base">
                     {translation.text}
@@ -70,6 +64,6 @@ export default function VerseCard({ verse, index = 0 }: VerseCardProps) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
