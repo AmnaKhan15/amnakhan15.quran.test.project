@@ -117,43 +117,6 @@ This project uses the Quran.Foundation API with OAuth2 authentication:
 6. **Error Handling**: Comprehensive error handling with user-friendly messages
 7. **Loading States**: Proper loading indicators for better UX
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import your repository to Vercel
-3. Add environment variables in Vercel dashboard:
-   - `QURAN_CLIENT_ID`
-   - `QURAN_CLIENT_SECRET`
-4. Deploy!
-
-### Other Platforms
-
-The application can be deployed to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- Your own server
-
-Make sure to set the environment variables in your deployment platform.
-
-## 📝 Development Notes
-
-### Adding New Features
-
-1. **New API Endpoint**: Add the function in `lib/quran-api.ts`
-2. **New API Route**: Create a route in `app/api/`
-3. **New Page**: Create a page in `app/`
-4. **New Component**: Add to `components/`
-
-### Environment Variables
-
-- `QURAN_CLIENT_ID`: Your Quran.Foundation Client ID
-- `QURAN_CLIENT_SECRET`: Your Quran.Foundation Client Secret
-- `QURAN_API_AUTH_URL`: OAuth2 token endpoint (optional, defaults to prelive)
-- `QURAN_API_BASE_URL`: API base URL (optional, defaults to prelive)
-
 ## 🐛 Troubleshooting
 
 ### "Failed to authenticate" error
