@@ -16,8 +16,8 @@ Use the **Pre-Production** credentials:
 
 ```env
 # Pre-Production (Test) Credentials
-QURAN_CLIENT_ID=2c18b618-244e-473c-a3ee-5ea17801b47f
-QURAN_CLIENT_SECRET=ukSkhb6jABZLwdODmsZyfCkbR0
+QURAN_CLIENT_ID=
+QURAN_CLIENT_SECRET=
 
 # Optional: Override URLs (defaults to prelive)
 # QURAN_API_AUTH_URL=https://prelive-oauth2.quran.foundation/oauth2/token
@@ -30,8 +30,8 @@ When you're ready to deploy to production, update `.env.local` with:
 
 ```env
 # Production (Live) Credentials
-QURAN_CLIENT_ID=4f8d66fd-93fa-4f61-903a-2b169dd18652
-QURAN_CLIENT_SECRET=Tx8we0A8c15gaOxPqkHfERgoDE
+QURAN_CLIENT_ID=
+QURAN_CLIENT_SECRET=
 
 # Production URLs
 QURAN_API_AUTH_URL=https://oauth2.quran.foundation/oauth2/token
